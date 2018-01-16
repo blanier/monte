@@ -59,7 +59,7 @@ var gameSource = (function(){
     val = Math.floor((timestamp/100)%255)
 
 
-    let tries = 10
+    let tries = 1000
     for (var i=0; i<tries; i++) {
 
       var r=g=b=0,
@@ -82,8 +82,8 @@ var gameSource = (function(){
     state.ratio.val = state.inside.val / state.points.val
     state.ratio4.val = state.ratio.val * 4
 
-    state.ratio.val = Math.floor(state.ratio.val * 100000)/100000
-    state.ratio4.val = Math.floor(state.ratio4.val * 100000)/100000
+    state.ratio.val = Math.round(state.ratio.val * 100000)/100000
+    state.ratio4.val = Math.round(state.ratio4.val * 100000)/100000
 
     ctx.putImageData(imageData, 0, 0);
 

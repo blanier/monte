@@ -2,10 +2,6 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
-td.resultval {
-  min-width: 200px;
-}
-
 .resultname {
   text-align: right;
 }
