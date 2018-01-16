@@ -59,14 +59,14 @@ var gameSource = (function(){
     val = Math.floor((timestamp/100)%255)
 
 
-    let tries = 1000
+    let tries = 10000
     for (var i=0; i<tries; i++) {
 
       var r=g=b=0,
           x= Math.random(), y=Math.random(),
           val=f(x)
 
-      if (val > y) {
+      if (val >= y) {
         state.inside.val++
         g=255
       } else {
