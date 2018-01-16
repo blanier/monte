@@ -1,0 +1,26 @@
+body {
+  font-family: 'Cutive Mono', monospace;
+}
+
+td.resultval {
+  min-width: 200px;
+}
+
+.resultname {
+  text-align: right;
+}
+
+
+.resultval {
+  text-align: left
+}
+
+#viz {
+  border: 5px solid yellow;
+}
+
+#stats {
+  display: inline-block;
+  vertical-align: top;
+  background: beige;
+}

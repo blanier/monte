@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Monte πTHON</title>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <canvas id="viz" width="400" height="400"></canvas>
+    <div id="stats">
+      <table>
+        <tr><th colspan="2">Results</th></tr>
+        <tr><td class="resultname">Points</td>  <td id="points"  class="resultval"/></tr>
+        <tr><td class="resultname">Inside</td>  <td id="inside"  class="resultval"/></tr>
+        <tr><td class="resultname">Outside</td> <td id="outside" class="resultval"/></tr>
+
+        <tr><td class="resultname">Ratio</td>   <td id="ratio"   class="resultval"/></tr>
+        <tr><td class="resultname">π/4</td>     <td id="piover4" class="resultval">0.78539816339</td></tr>
+
+        <tr><td class="resultname">Ratio*4</td> <td id="ratio4"  class="resultval"/></tr>
+        <tr><td class="resultname">π</td>       <td id="pi"      class="resultval">3.14159265359</td></tr>
+
+      </table>
+    </div>
+
+    <script src="monte.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var g
+      function autorun() {
+        g = new gameSource(document.getElementById("viz"),
+                           document.getElementById("points"),
+                           document.getElementById("inside"),
+                           document.getElementById("outside"),
+                           document.getElementById("ratio"),
+                           document.getElementById("ratio4")
+                          )
+      }
+
+      if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+      else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+      else window.onload = autorun;
+    </script>
+  </body>
+</html>
